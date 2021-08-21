@@ -1,0 +1,28 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+
+
+    {% for listing in Listings %}
+    {% if not listing.closed %} 
+    <div class='container'>
+        {% if listing.closed %} <h2>closed</h2>{%endif%}
+        <pre> <img src= "{{listing.image_url}}" width= '150px' height='150px'>     <a href='/listing/{{listing.name}}'><b>{{listing.name}} </b></a>
+                          Price - ${{listing.current_bid}}
+                          Listed by -{{listing.listed_by}} 
+                          Category- {{listing.category}}
+                                  
+</pre>
+    </div>
+    {%endif%}
+<hr> <br>
+{% endfor %}
+
+
+    
+
+
+    
+    
+{% endblock %}

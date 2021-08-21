@@ -1,0 +1,11 @@
+#include<stdio.h>
+fun1(){
+    printf("Hello");
+}
+fun2(){
+    printf("Hi");
+}
+main()
+{
+    printf("%d,%d",fun1(),fun2());
+}
